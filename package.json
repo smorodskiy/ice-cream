@@ -7,7 +7,7 @@
     "build": "parcel build src/*.html --public-url /ice-cream/"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Igor Smorodsky",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.6.0",
