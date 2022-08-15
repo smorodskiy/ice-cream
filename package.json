@@ -2,9 +2,14 @@
   "name": "ice-cream",
   "version": "2.0.0",
   "description": "",
+  "homepage": "https://smorodskiy.github.io/ice-cream",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /ice-cream/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smorodskiy/ice-cream.git"
   },
   "keywords": [],
   "author": "Igor Smorodsky",
