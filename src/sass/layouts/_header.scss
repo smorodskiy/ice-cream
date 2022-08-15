@@ -1,0 +1,53 @@
+.page-header {
+  position: absolute;
+  width: 100%;
+  z-index: auto;
+
+  &__container {
+    position: relative;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: 65px;
+    padding-top: 8px;
+  }
+
+  &__button {
+    display: none;
+    z-index: 1;
+  }
+
+  // &__hum-icon {
+  //   width: 20px;
+  //   height: 12px;
+  // }
+
+  @include mq('tablet') {
+    &__wrapper {
+      padding-top: 32px;
+    }
+
+    &__burger-button {
+      margin-right: 32px;
+      // margin-right: 20px;
+    }
+
+    &__button {
+      padding: 11px 37px;
+      display: inline-block;
+    }
+  }
+
+  @include mq('desktop') {
+    &__wrapper {
+      padding-top: 37px;
+    }
+
+    &__burger-button {
+      display: none;
+    }
+  }
+}

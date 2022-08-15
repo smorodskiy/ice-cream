@@ -1,0 +1,330 @@
+.hero {
+  background: var(--background-primary-color);
+
+  &__container {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    @include section(194px, 158px);
+  }
+
+  // Main picture box
+  &__pic-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 32px;
+    bottom: 0;
+  }
+
+  // Circle of the main pic
+  &__pic-box:before {
+    content: '';
+    width: 346px;
+    height: 346px;
+    background: var(--background-secondary-color);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: -9px;
+    animation: pulse infinite ease-in-out 4s;
+  }
+
+  // Main pic of hero
+  &__pic {
+    position: relative;
+  }
+
+  // Maybe do it with Visible style?
+  // Info wrapper
+  // Right column of hero
+  &__right-wrapper,
+  &__info-wrapper {
+    display: none;
+  }
+
+  // Left/Right column of hero
+  &__left-wrapper,
+  &__right-wrapper {
+    z-index: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // Title wrapper
+  &__title-wrapper {
+    width: 218px;
+  }
+
+  // H1 Title
+  &__title {
+    font-family: 'Titan One', cursive;
+    text-transform: uppercase;
+    font-weight: 400;
+    @include fonts(26px, 30px);
+    color: var(--white-color);
+  }
+  &__secondline {
+    @include fonts(48px, 46px);
+    color: var(--title-color);
+  }
+
+  &__buttons {
+    margin-top: 20px;
+  }
+
+  &__button {
+    padding: 7px 15px;
+    @include fonts(8px, 10px, 400);
+  }
+
+  &__button--left-margin {
+    margin-left: 8px;
+  }
+
+  // TABLET
+  @include mq('tablet') {
+    &__container {
+      @include section(102px, 0);
+    }
+
+    &__pic-box {
+      right: 277px;
+    }
+
+    &__pic-box:before {
+      width: 335px;
+      height: 335px;
+      top: -37px;
+    }
+
+    &__pic {
+      left: -50px;
+    }
+
+    &__left-wrapper,
+    &__right-wrapper,
+    &__info-wrapper {
+      display: flex;
+    }
+
+    &__title-wrapper {
+      width: 162px;
+    }
+
+    &__title {
+      @include fonts(22px, 25px);
+    }
+
+    &__secondline {
+      @include fonts(34px, 31px);
+    }
+
+    &__button {
+      @include fonts(8px, 10px, 400);
+    }
+
+    // Info wrapper
+    &__info-wrapper {
+      padding-bottom: 16px;
+      align-items: center;
+      @include fonts(8px, 16px, 400);
+      color: var(--white-color);
+    }
+
+    &__text-box {
+      width: 114px;
+    }
+
+    // Content of the Text box
+    &__text {
+      margin-bottom: 7px;
+    }
+
+    &__button {
+      padding: 7px 14px;
+    }
+
+    &__button-arrow {
+      width: 18px;
+      height: 18px;
+      padding: 0;
+    }
+
+    &__right-wrapper {
+      gap: 70px;
+    }
+
+    // Statistic item
+    &__stat-item {
+      position: relative;
+      text-align: end;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__stat-item:first-child {
+      margin-bottom: 15px;
+    }
+
+    // Statistic circle
+    &__stat-item::after {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: var(--white-color);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    &__stat-wrapper {
+      margin-right: -15px;
+      text-align: right;
+    }
+
+    &__stat-num {
+      font-family: 'Titan One';
+      @include fonts(28px, 32px, false, 0.04em);
+      text-transform: uppercase;
+      color: var(--title-color);
+    }
+
+    &__stat-text {
+      @include fonts(8px, 10px, 400, false);
+      color: var(--white-color);
+    }
+  }
+
+  // DESKTOP
+  @include mq('desktop') {
+    &__container {
+      @include section(147px, 0);
+    }
+
+    &__pic-box {
+      right: 290px;
+    }
+
+    &__pic-box:before {
+      width: 534px;
+      height: 534px;
+      top: -54px;
+    }
+
+    &__title {
+      @include fonts(38px, 43px);
+    }
+
+    &__secondline {
+      @include fonts(58px, 52px);
+    }
+
+    &__button {
+      padding: 11px 23px;
+      @include fonts(14px, 18px, 400);
+    }
+
+    &__button--left-margin {
+      margin-left: 12px;
+    }
+
+    // Info wrapper
+    &__info-wrapper {
+      padding-bottom: 60px;
+      align-items: center;
+      @include fonts(14px, 25px, 400);
+      color: var(--white-color);
+    }
+
+    &__text-box {
+      width: 200px;
+    }
+
+    // Content of the Text box
+    &__text {
+      margin-bottom: 20px;
+    }
+
+    &__button-arrow {
+      width: 26px;
+      height: 26px;
+    }
+
+    &__buttons {
+      margin-top: 24px;
+    }
+
+    &__title-wrapper {
+      width: 277px;
+    }
+
+    &__right-wrapper {
+      gap: 103px;
+    }
+
+    // Statistic circle
+    &__stat-item::after {
+      content: '';
+      width: 30px;
+      height: 30px;
+    }
+
+    &__stat-num {
+      @include fonts(46px, 53px, false, 0.04em);
+    }
+
+    &__stat-text {
+      @include fonts(14px, 18px, false, false);
+    }
+  }
+}
+
+// Animation
+.hero {
+  // svg text {
+  //   font-family: Titan One;
+  //   letter-spacing: 5px;
+  //   stroke: #d41443;
+  //   font-size: 40px;
+  //   font-weight: 700;
+  //   stroke-width: 0.2;
+  //   text-transform: uppercase;
+  //   animation: textAnimate 5s infinite alternate;
+  // }
+
+  // @keyframes textAnimate {
+  //   0% {
+  //     stroke-dasharray: 0 50%;
+  //     stroke-dashoffset: 20%;
+  //     fill: #d41443;
+  //   }
+
+  //   100% {
+  //     stroke-dasharray: 50% 0;
+  //     stroke-dashoffstet: -20%;
+  //     fill: #fff;
+  //   }
+  // }
+
+  // Text flow
+  .char {
+    animation: an 1s ease-out 1 both;
+    display: inline-block;
+  }
+
+  @keyframes an {
+    from {
+      opacity: 0;
+      transform: perspective(500px) translate3d(-35px, -40px, -150px)
+        rotate3d(1, -1, 0, 35deg);
+    }
+    to {
+      opacity: 1;
+      transform: perspective(500px) translate3d(0, 0, 0);
+    }
+  }
+}

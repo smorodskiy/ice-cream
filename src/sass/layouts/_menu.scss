@@ -1,0 +1,91 @@
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  // visibility: hidden;
+  padding: 60px 20px 0 20px;
+  width: 250px;
+  height: 100vh;
+  
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--background-mobile-menu);
+  z-index: 5;
+  transition: clip-path 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  clip-path: polygon(84.5% 4.5%, 91.5% 4.5%, 91.5% 4.5%, 84.5% 4.5%);
+
+  &.is-open {
+    // display: block;
+    // width: calc(250px - var(--scrollbar-width));
+    // width: 250px;
+    
+    clip-path: polygon(101% -1%, 101% 101%, -1% 101%, -1% -1%);
+  }
+
+  &.is-open > &__button,
+  &.is-open > &__pages {
+    transform: scale(1);
+  }
+
+  &__icon-close {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    margin: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    // background: $background-color-page-primary;
+    // transition: fill $anim-duration $anim-function;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__button,
+  &__pages {
+    transform: scale(0.8);
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__pages {
+    @include fonts(14px, 18px, 700);
+    color: var(--white-color);
+  }
+
+  &__item {
+    margin-top: 33px;
+    margin-bottom: 22px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq('tablet') {
+    &:not(.is-open) {
+      // transition: none;
+    }
+    
+
+    clip-path: polygon(11% 8%, 18% 8%, 18% 8%, 11% 8%);
+  }
+}
+
+// Hover
+.menu {
+  // Close button hover
+  &__icon-close:hover {
+    //   fill: $accent-color;
+  }
+
+  &__item:hover {
+    padding-left: 5px;
+    color: var(--accent-font-color);
+  }
+}

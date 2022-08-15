@@ -1,0 +1,46 @@
+.burger-button {
+  display: flex;
+  margin-left: auto;
+  z-index: 100;
+
+  .bar {
+    stroke: var(--accent-font-color);
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .bar2 {
+    transform-origin: unset;
+  }
+
+  .bar3 {
+    transition: stroke 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &.is-open .bar {
+    stroke: var(--white-color);
+  }
+
+  &.is-open .bar1 {
+    transform: translateX(8px) translateY(2px) rotate(45deg);
+  }
+
+  &.is-open .bar2 {
+    transform: translateY(4px) rotate(-45deg);
+    transform-origin: center;
+  }
+
+  &.is-open .bar3 {
+    stroke: transparent;
+  }
+
+  // TABLET
+  @include mq('tablet') {
+    &.is-open {
+    //   opacity: 100;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      margin-right: 20px;
+    //   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}

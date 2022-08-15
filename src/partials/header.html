@@ -1,0 +1,78 @@
+<!-- Header -->
+
+<header class="page-header">
+  <!-- CONTAINER -->
+  <div class="container page-header__container">
+    <!-- Top header -->
+    <div class="page-header__wrapper">
+      <!-- Logo -->
+      <div class="logo">
+        <a class="logo__link" href="/">
+          <svg class="logo__icon">
+            <use xlink:href="./images/sprite.svg#icon-logo"></use>
+          </svg>
+          <!-- <span class="logo__text">icecream</span> -->
+          <div class="logo__text">
+            <span style="--i: 1">i</span>
+            <span style="--i: 2">c</span>
+            <span style="--i: 3">e</span>
+            <span style="--i: 4">c</span>
+            <span style="--i: 5">r</span>
+            <span style="--i: 6">e</span>
+            <span style="--i: 7">a</span>
+            <span style="--i: 8">m</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="navigation">
+        <!-- Navigation -->
+        <ul class="navigation__pages">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#home">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#about">About us</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#how">How it’s made?</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#products">Our products</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#contacts">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Burger Button -->
+      <div class="burger-button page-header__burger-button" data-menu-button>
+        <!-- <svg class="page-header__hum-icon">
+            <use xlink:href="./images/sprite.svg#icon-burger"></use>
+          </svg> -->
+        <svg
+          id="icon-burger"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 46 32"
+          height="37"
+          width="21"
+        >
+          <g class="top-bars" stroke-width="4">
+            <path class="bar bar1" d="M0 2.286h45.714"></path>
+            <path class="bar bar2" d="M0 16h45.714"></path>
+            <path class="bar bar3" d="M0 29.714h45.714"></path>
+          </g>
+        </svg>
+      </div>
+
+      <!-- OPEN MODAL WINDOW -->
+      <!-- Button -->
+      <a class="button page-header__button" href="#">Buy now ></a>
+
+      <!-- Mobile menu -->
+      <include src="./partials/menu.html"></include>
+    </div>
+  </div>
+</header>

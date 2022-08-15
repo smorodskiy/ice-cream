@@ -1,0 +1,240 @@
+<!-- Hero section -->
+<section id="home" class="hero">
+  <!-- CONTAINER -->
+  <div class="container hero__container">
+    <!-- Picture in the circle -->
+    <div class="hero__pic-box animate__animated animate__rotateInUpLeft">
+      <div class="animate__animated animate__jackInTheBox animate__bounce">
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              ./images/hero/mobile/slider-pic1.webp    1x,
+              ./images/hero/mobile/slider-pic1@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              ./images/hero/mobile/slider-pic1.png    1x,
+              ./images/hero/mobile/slider-pic1@2x.png 2x
+            "
+            type="image/png"
+          />
+          <source
+            media="(max-width: 1199px)"
+            srcset="
+              ./images/hero/tablet/slider-pic1.webp    1x,
+              ./images/hero/tablet/slider-pic1@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1199px)"
+            srcset="
+              ./images/hero/tablet/slider-pic1.png    1x,
+              ./images/hero/tablet/slider-pic1@2x.png 2x
+            "
+            type="image/png"
+          />
+
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/desktop/slider-pic1.webp    1x,
+              ./images/hero/desktop/slider-pic1@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/desktop/slider-pic1.png    1x,
+              ./images/hero/desktop/slider-pic1@2x.png 2x
+            "
+            type="image/png"
+          />
+          <!-- animate__animated animate__bounceIn animate__delay-5s -->
+          <img
+            class="hero__pic animate__animated animate__pulse animate__slower animate__infinite"
+            src="./images/hero/desktop/slider-pic1.webp"
+            alt="icecream"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+    </div>
+
+    <!-- Left Column -->
+    <div class="hero__left-wrapper">
+      <!-- Title wrapper -->
+      <div class="hero__title-wrapper animate__animated animate__bounceIn">
+        <!-- Title Component -->
+        <h1 class="hero__title">
+          ice cream made with
+          <span class="hero__secondline">passion</span>
+        </h1>
+
+        <!-- <svg >
+          <text x="50%" y="60%" text-anchor="middle">passion</text>
+        </svg> -->
+
+        <!-- Buttons -->
+        <div class="hero__buttons">
+          <a class="button button--red hero__button" href="#products">
+            Products
+          </a>
+          <a class="button hero__button hero__button--left-margin" href="#how">
+            How it’s made?
+          </a>
+        </div>
+      </div>
+
+      <!-- Info box -->
+      <div class="hero__info-wrapper">
+        <!-- Picture -->
+        <picture>
+          <source
+            media="(max-width: 1199px)"
+            srcset="
+              ./images/hero/tablet/slider-pic2.webp    1x,
+              ./images/hero/tablet/slider-pic2@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1199px)"
+            srcset="
+              ./images/hero/tablet/slider-pic2.png    1x,
+              ./images/hero/tablet/slider-pic2@2x.png 2x
+            "
+            type="image/png"
+          />
+
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/desktop/slider-pic2.webp    1x,
+              ./images/hero/desktop/slider-pic2@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/desktop/slider-pic2.png    1x,
+              ./images/hero/desktop/slider-pic2@2x.png 2x
+            "
+            type="image/png"
+          />
+          <img
+            class="hero__info-pic animate__animated animate__slideInLeft"
+            src="./images/hero/desktop/slider-pic2.webp"
+            alt="milk"
+            loading="lazy"
+          />
+        </picture>
+
+        <!-- Content in box -->
+        <div class="hero__text-box">
+          <p class="hero__text" id="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+
+          <div
+            class="button hero__button-arrow animate__animated animate__backInUp"
+          >
+            <a href="#">
+              <picture>
+                <source
+                  srcset="
+                    ./images/arrows/arrow.webp    1x,
+                    ./images/arrows/arrow@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/arrows/arrow.png    1x,
+                    ./images/arrows/arrow@2x.png 2x
+                  "
+                  type="image/png"
+                />
+                <img
+                  src="./images/arrows/arrow.png"
+                  alt="Arrow button"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="hero__right-wrapper">
+      <!-- List -->
+      <div class="hero__stat animate__animated animate__bounceIn">
+        <ul class="hero__stat-list">
+          <li class="hero__stat-item">
+            <div class="hero__stat-wrapper">
+              <h3 class="hero__stat-num">16</h3>
+              <p class="hero__stat-text">cafes</p>
+            </div>
+          </li>
+          <li class="hero__stat-item">
+            <div class="hero__stat-wrapper">
+              <h3 class="hero__stat-num">23</h3>
+              <p class="hero__stat-text">food trucks</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Picture with a girl -->
+      <picture>
+        <source
+          media="(max-width: 1199px)"
+          srcset="
+            ./images/hero/tablet/slider-pic3.webp    1x,
+            ./images/hero/tablet/slider-pic3@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          media="(max-width: 1199px)"
+          srcset="
+            ./images/hero/tablet/slider-pic3.png    1x,
+            ./images/hero/tablet/slider-pic3@2x.png 2x
+          "
+          type="image/png"
+        />
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/hero/desktop/slider-pic3.webp    1x,
+            ./images/hero/desktop/slider-pic3@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/hero/desktop/slider-pic3.png    1x,
+            ./images/hero/desktop/slider-pic3@2x.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          class="hero__girl-pic animate__animated animate__slideInRight"
+          src="/src/images/hero/desktop/slider-pic3.webp"
+          alt="Girl"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</section>

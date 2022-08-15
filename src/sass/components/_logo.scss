@@ -1,0 +1,53 @@
+.logo {
+  z-index: 1;
+
+  &__link {
+    display: flex;
+    font-family: 'Titan One';
+    @include fonts(24px, 44px, 400, -.07em);
+    // letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-right: 20px;
+    width: 49px;
+    height: 49px;
+  }
+
+  &__text {
+    align-self: center;
+    color: var(--title-color);
+  }
+
+  @include mq('tablet') {
+    &__icon {
+    }
+  }
+
+  @include mq('desktop') {
+  }
+}
+
+// Animation
+.logo {
+  &__text {
+    position: relative;
+  }
+  &__text span {
+    position: relative;
+    display: inline-block;
+    // font-size: 40px;
+    // color: #fff;
+    // text-transform: uppercase;
+    animation: flip 5s infinite;
+    animation-delay: calc(0.2s * var(--i));
+  }
+  @keyframes flip {
+    0%,
+    50% {
+      transform: rotateY(360deg);
+    }
+  }
+}
