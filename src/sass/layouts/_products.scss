@@ -16,7 +16,6 @@
   @include mq(desktop) {
     margin-bottom: 16px;
   }
-
 }
 
 .section__title {
@@ -32,7 +31,6 @@
   @include mq(desktop) {
     margin-bottom: 255px;
   }
-
 }
 
 .products-set {
@@ -45,14 +43,21 @@
   @include mq(tablet) {
     gap: 32px;
   }
-
 }
 
 .product {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  height: 100%;
   position: relative;
   padding: 140 39 40 41;
-  background-color: var(--card-color-first);
   border-radius: 24px;
+
+  &-cream {
+    background-color: var(--card-color-first);
+  }
 
   &-coffee {
     background-color: var(--card-color-second);
@@ -69,7 +74,75 @@
   @include mq(desktop) {
     padding: 165 62 60 61;
   }
+}
 
+.back-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 160 39 40 41;
+  // background-color: var(--card-color-first);
+  border-radius: 24px;
+  // flex-grow: 1;
+  @include mq(tablet) {
+    padding: 118 32 40 32;
+  }
+
+  @include mq(desktop) {
+    padding: 165 62 60 61;
+  }
+}
+
+.back-product__list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+
+  text-align: center;
+  color: #972929;
+
+  @include fonts(20px, 21px, 700, 0.04em);
+}
+
+.front {
+  transition: 1s;
+  backface-visibility: hidden;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  perspective: 1000px;
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  transform: rotateY(180deg);
+  transition: 1s;
+  backface-visibility: hidden;
+  & img {
+    transform: rotate(180deg);
+  }
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  bottom: 0;
+}
+
+input[type='checkbox']:checked ~ .front {
+  transform: rotateY(180deg);
+}
+input[type='checkbox']:checked ~ .back {
+  transform: rotateY(360deg);
 }
 
 .product-cream::before {
@@ -83,13 +156,13 @@
   width: 280px;
   height: 280px;
 
-  background-image: url(../images/products/mobile/product-pic1.png);
+  background-image: url(../images/products/mobile/product-pic1.webp);
   background-size: contain;
 
   @media (min-device-ratio: 2),
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
-    background-image: url(../images/products/mobile/product-pic1@2x.png);
+    background-image: url(../images/products/mobile/product-pic1@2x.webp);
   }
 
   @include mq(tablet) {
@@ -98,13 +171,13 @@
     width: 224px;
     height: 224px;
 
-    background-image: url(../images/products/tablet/product-pic1.png);
+    background-image: url(../images/products/tablet/product-pic1.webp);
     background-size: contain;
 
     @media (min-device-ratio: 2),
       (min-resolution: 2dppx),
       (min-resolution: 192dpi) {
-      background-image: url(../images/products/tablet/product-pic1@2x.png);
+      background-image: url(../images/products/tablet/product-pic1@2x.webp);
     }
   }
 
@@ -114,13 +187,13 @@
     width: 368px;
     height: 394px;
 
-    background-image: url(../images/products/desktop/product-pic1.png);
+    background-image: url(../images/products/desktop/product-pic1.webp);
     background-size: contain;
-    
+
     @media (min-device-ratio: 2),
       (min-resolution: 2dppx),
       (min-resolution: 192dpi) {
-      background-image: url(../images/products/desktop/product-pic1@2x.png);
+      background-image: url(../images/products/desktop/product-pic1@2x.webp);
     }
   }
 }
@@ -135,13 +208,13 @@
 
   width: 280px;
   height: 280px;
-  background-image: url(../images/products/mobile/product-pic2.png);
+  background-image: url(../images/products/mobile/product-pic2.webp);
   background-size: contain;
 
   @media (min-device-ratio: 2),
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
-    background-image: url(../images/products/mobile/product-pic2@2x.png);
+    background-image: url(../images/products/mobile/product-pic2@2x.webp);
   }
 
   @include mq(tablet) {
@@ -150,12 +223,12 @@
     width: 224px;
     height: 224px;
 
-    background-image: url(../images/products/tablet/product-pic2.png);
+    background-image: url(../images/products/tablet/product-pic2.webp);
     background-size: contain;
     @media (min-device-ratio: 2),
       (min-resolution: 2dppx),
       (min-resolution: 192dpi) {
-      background-image: url(../images/products/tablet/product-pic2@2x.png);
+      background-image: url(../images/products/tablet/product-pic2@2x.webp);
     }
   }
 
@@ -165,13 +238,13 @@
     width: 368px;
     height: 394px;
 
-    background-image: url(../images/products/desktop/product-pic2.png);
+    background-image: url(../images/products/desktop/product-pic2.webp);
     background-size: contain;
-    
+
     @media (min-device-ratio: 2),
       (min-resolution: 2dppx),
       (min-resolution: 192dpi) {
-      background-image: url(../images/products/desktop/product-pic2@2x.png);
+      background-image: url(../images/products/desktop/product-pic2@2x.webp);
     }
   }
 }
@@ -188,13 +261,13 @@
   width: 280px;
   height: 280px;
 
-  background-image: url(../images/products/mobile/product-pic3.png);
+  background-image: url(../images/products/mobile/product-pic3.webp);
   background-size: contain;
 
   @media (min-device-ratio: 2),
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
-    background-image: url(../images/products/mobile/product-pic3@2x.png);
+    background-image: url(../images/products/mobile/product-pic3@2x.webp);
   }
 
   @include mq(tablet) {
@@ -203,12 +276,12 @@
     width: 224px;
     height: 224px;
 
-    background-image: url(../images/products/tablet/product-pic3.png);
+    background-image: url(../images/products/tablet/product-pic3.webp);
     background-size: contain;
     @media (min-device-ratio: 2),
       (min-resolution: 2dppx),
       (min-resolution: 192dpi) {
-      background-image: url(../images/products/tablet/product-pic3@2x.png);
+      background-image: url(../images/products/tablet/product-pic3@2x.webp);
     }
   }
 
@@ -218,16 +291,15 @@
     width: 368px;
     height: 394px;
 
-    background-image: url(../images/products/desktop/product-pic3.png);
+    background-image: url(../images/products/desktop/product-pic3.webp);
     background-size: contain;
-    
+
     @media (min-device-ratio: 2),
       (min-resolution: 2dppx),
       (min-resolution: 192dpi) {
-      background-image: url(../images/products/desktop/product-pic3@2x.png);
+      background-image: url(../images/products/desktop/product-pic3@2x.webp);
     }
   }
-
 }
 
 .product__name {
@@ -292,6 +364,8 @@
 }
 
 .arrow-right {
+  display: block;
+  cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   width: 40px;

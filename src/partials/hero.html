@@ -85,7 +85,7 @@
           <a class="button button--red hero__button" href="#products">
             Products
           </a>
-          <a class="button hero__button hero__button--left-margin" href="#how">
+          <a class="button hero__button hero__button--left-margin" href="#howmade">
             How it’s made?
           </a>
         </div>
@@ -195,46 +195,73 @@
       </div>
 
       <!-- Picture with a girl -->
-      <picture>
-        <source
-          media="(max-width: 1199px)"
-          srcset="
-            ./images/hero/tablet/slider-pic3.webp    1x,
-            ./images/hero/tablet/slider-pic3@2x.webp 2x
-          "
-          type="image/webp"
-        />
-        <source
-          media="(max-width: 1199px)"
-          srcset="
-            ./images/hero/tablet/slider-pic3.png    1x,
-            ./images/hero/tablet/slider-pic3@2x.png 2x
-          "
-          type="image/png"
-        />
-        <source
-          media="(min-width: 1200px)"
-          srcset="
-            ./images/hero/desktop/slider-pic3.webp    1x,
-            ./images/hero/desktop/slider-pic3@2x.webp 2x
-          "
-          type="image/webp"
-        />
-        <source
-          media="(min-width: 1200px)"
-          srcset="
-            ./images/hero/desktop/slider-pic3.png    1x,
-            ./images/hero/desktop/slider-pic3@2x.png 2x
-          "
-          type="image/png"
-        />
-        <img
-          class="hero__girl-pic animate__animated animate__slideInRight"
-          src="/src/images/hero/desktop/slider-pic3.webp"
-          alt="Girl"
-          loading="lazy"
-        />
-      </picture>
+      <div class="hero__girl-box animate__animated animate__slideInRight">
+        <div class="drops">
+          <div class="drops__drop1"></div>
+          <div class="drops__drop2"></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+          >
+            <defs>
+              <filter id="liquid">
+                <feGaussianBlur
+                  in="SourceGraphic"
+                  stdDeviation="10"
+                  result="blur"
+                />
+                <feColorMatrix
+                  in="blur"
+                  type="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                  result="liquid"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+
+        <picture>
+          <source
+            media="(max-width: 1199px)"
+            srcset="
+              ./images/hero/tablet/slider-pic3.webp    1x,
+              ./images/hero/tablet/slider-pic3@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1199px)"
+            srcset="
+              ./images/hero/tablet/slider-pic3.png    1x,
+              ./images/hero/tablet/slider-pic3@2x.png 2x
+            "
+            type="image/png"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/desktop/slider-pic3.webp    1x,
+              ./images/hero/desktop/slider-pic3@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/desktop/slider-pic3.png    1x,
+              ./images/hero/desktop/slider-pic3@2x.png 2x
+            "
+            type="image/png"
+          />
+          <img
+            class="hero__girl-pic"
+            src="/src/images/hero/desktop/slider-pic3.webp"
+            alt="Girl"
+            loading="lazy"
+          />
+        </picture>
+      </div>
     </div>
   </div>
 </section>

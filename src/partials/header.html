@@ -1,5 +1,4 @@
 <!-- Header -->
-
 <header class="page-header">
   <!-- CONTAINER -->
   <div class="container page-header__container">
@@ -48,11 +47,11 @@
       </nav>
 
       <!-- Burger Button -->
-      <div class="burger-button page-header__burger-button" data-menu-button>
-        <!-- <svg class="page-header__hum-icon">
+      <!-- <div class="burger-button page-header__burger-button" data-menu-button> -->
+      <!-- <svg class="page-header__hum-icon">
             <use xlink:href="./images/sprite.svg#icon-burger"></use>
           </svg> -->
-        <svg
+      <!-- <svg
           id="icon-burger"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 46 32"
@@ -65,14 +64,21 @@
             <path class="bar bar3" d="M0 29.714h45.714"></path>
           </g>
         </svg>
-      </div>
+      </div> -->
+
+      <button class="menu-button" data-menu-button>
+        <span class="burger-menu"></span>
+      </button>
+      <button class="page-header__button button" type="button" data-modal-btn>
+        Buy now
+        <svg class="icon" width="16px" height="16px">
+          <use href="./images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
 
       <!-- OPEN MODAL WINDOW -->
       <!-- Button -->
-      <a class="button page-header__button" href="#">Buy now ></a>
-
-      <!-- Mobile menu -->
-      <include src="./partials/menu.html"></include>
+      <!-- <a class="button page-header__button" href="#">Buy now ></a> -->
     </div>
   </div>
 </header>

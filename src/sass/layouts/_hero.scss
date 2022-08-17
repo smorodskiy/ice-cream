@@ -1,8 +1,8 @@
 .hero {
   background: var(--background-primary-color);
-
+  overflow: hidden;
   &__container {
-    overflow: hidden;
+  
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -83,6 +83,10 @@
 
   &__button--left-margin {
     margin-left: 8px;
+  }
+
+  &__girl-box {
+    position: relative;
   }
 
   // TABLET

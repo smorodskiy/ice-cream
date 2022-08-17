@@ -1,5 +1,5 @@
 <!--                         ABOUT               -->
-<section class="about" id="about">
+<section class="about" id="howmade">
   <div class="about__container container">
     <p class="about__label label-title">tradition and love</p>
     <h2 class="about__title title">how it’s made?</h2>
@@ -83,12 +83,45 @@
             </p>
           </li>
         </ul>
-        <button class="about__btn button" type="button" data-modal-open>
+        <button
+          class="about__btn button"
+          type="button"
+          data-modal-btn="read more"
+        >
           Read more
           <svg class="about-icon" width="15" height="20">
             <use href="./images/sprite.svg#icon-arrow"></use>
           </svg>
         </button>
+      </div>
+    </div>
+  </div>
+
+  <!--        MODAL       READ MORE         -->
+
+  <div class="backdrop is-hidden no-scroll modal-video" data-modal="read more">
+    <div class="modal about-modal">
+      <button
+        class="about-modal__button--close close-modal"
+        data-modal-btn="close"
+        type="button"
+      >
+        <svg class="about-modal__close-icon" width="18" height="18">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <p class="modal-title title">how it’s made?</p>
+      <div class="modal-iframe">
+        <iframe
+          class="ifreme your-iframe"
+          id="video"
+          width="560"
+          height="450"
+          src="https://www.youtube.com/embed/hO-7cz7gyAY?enablejsapi=1"
+          title="YouTube video player"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </div>
